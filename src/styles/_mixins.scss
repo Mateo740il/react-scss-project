@@ -10,4 +10,10 @@
             @content;
         }
     }
+
+    @else if $point==medium {
+        @media only screen and (max-width:$mediumScreen) {
+            @content;
+        }
+    }
 }

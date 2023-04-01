@@ -17,7 +17,7 @@
         min-height: 150px;
 
         & img{
-            max-width: 30%;
+            width: 20%;
             padding: 10px;
             margin:0 auto;
             filter: drop-shadow(1px 1px 1px #222);
@@ -42,13 +42,27 @@
         }
     }
 
-    @include responsive(mobile){
-        width: 80%;
-        margin: 20px auto;
+    @include responsive(medium){
+        grid-template-columns: repeat(3,1fr);
+        
+        &__userDetails{
+            width: 90%;
+        }
+    }
+
+    @include responsive(tablet){
         grid-template-columns: repeat(2,1fr);
         
         &__userDetails{
             width: 90%;
+        }
+    }
+
+    @include responsive(mobile){
+        grid-template-columns: repeat(1,1fr);
+        
+        &__userDetails{
+            width: 80%;
         }
     }
 }
