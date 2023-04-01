@@ -1,0 +1,32 @@
+.header{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: $grey-section;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &__logo{
+        max-width: 80px;
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    }
+
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        &__link{
+            text-decoration: none;
+            color: $text-color-black;
+            font-weight: bold;
+
+            &:hover{
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 5px;
+            }
+        }
+    }
+}

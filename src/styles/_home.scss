@@ -1,0 +1,23 @@
+.home{
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    &__headline{
+        flex-basis: 40%;
+        font-weight: 500;
+
+        &__green{
+            color: $headline-green;
+        }
+    }
+
+    &__image{
+        flex-basis: 60%;
+        max-width: 600px;
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    }
+}

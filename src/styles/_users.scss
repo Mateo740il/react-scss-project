@@ -1,0 +1,54 @@
+.users{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+    &__userCard{
+        padding: 20px;
+        background-color: $grey-section;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 150px;
+
+        & img{
+            max-width: 30%;
+            padding: 10px;
+            margin:0 auto;
+            filter: drop-shadow(1px 1px 1px #222);
+        }
+    }
+
+    &__userDetails{
+        padding: 30px;
+        background-color: $grey-section;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 50%;
+        margin: 30px auto 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        border-radius: 20px;
+
+        & img{
+            width: 100%;
+        }
+    }
+
+    @include responsive(mobile){
+        width: 80%;
+        margin: 20px auto;
+        grid-template-columns: repeat(2,1fr);
+        
+        &__userDetails{
+            width: 90%;
+        }
+    }
+}

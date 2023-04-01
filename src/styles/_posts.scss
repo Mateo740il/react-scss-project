@@ -1,0 +1,62 @@
+.posts{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__postCard{
+        padding: 20px;
+        width: 70%;
+        margin: 0 auto;
+        background-color: $grey-section;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__postDetails{
+        width: 80%;
+        max-width: 1200px;
+        margin: 50px auto 100px;
+        background-color: $grey-section;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 30px 30px 60px;
+        border-radius: 20px;
+
+        & img{
+            width: 60%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            filter: drop-shadow(3px 3px 3px #222);
+        }
+
+        &__content{
+            width: 70%;
+            margin: 10px auto;
+            max-width: 800px;
+        }
+    }
+
+    @include responsive(tablet){
+       
+        &__postCard{
+            width: 90%;
+        }
+    }
+
+    @include responsive(mobile){
+       
+        &__postCard{
+            width: 90%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
